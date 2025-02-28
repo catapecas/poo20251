@@ -1,8 +1,8 @@
 package Clase4;
 
 public class Vehiculo {
-    
-    //atributos de la clase
+
+    // atributos de la clase
     private String marca;
     private String color;
     private double cilindraje;
@@ -11,66 +11,64 @@ public class Vehiculo {
     private String potencia;
 
     /*
-     * Constructor de la clase ->permite  inicializar el objeto.
-     * El constructor de la clase se reconoce porque tiene el mismo 
-     * nombre de la clase 
+     * Constructor de la clase ->permite inicializar el objeto.
+     * El constructor de la clase se reconoce porque tiene el mismo
+     * nombre de la clase
      */
 
-     public Vehiculo (String marca,String color,double cilindraje,String chasis,
-     double peso,String potencia ) {
+    public Vehiculo(String marca, String color, double cilindraje, String chasis,
+            double peso, String potencia) {
 
         this.marca = marca;
         this.color = color;
         this.cilindraje = cilindraje;
-        this.chasis = chasis ;
+        this.chasis = chasis;
         this.peso = peso;
         this.potencia = potencia;
 
-     }
-     // metodo getter/setter
+    }
+    // metodo getter/setter
 
-     public String getMarca(){
+    public String getMarca() {
         return marca;
 
-     }
+    }
 
-     public void setMarca( String marca){
-        this.marca = marca ;
+    public void setMarca(String marca) {
+        this.marca = marca;
 
-     }
-        
+    }
 
-        // permite mostrar el objetivo
+    // permite mostrar el objetivo
 
-     public String toString(){
+    public String toString() {
 
-            return " vehiculo { Marca:" + marca + ", color: "+ color +", cilindraje:"+ cilindraje
-        + "chasis:" + chasis + ", peso:"+ peso + ",potencia: " + potencia + " }";
+        return " vehiculo { Marca:" + marca + ", color: " + color + ", cilindraje:" + cilindraje
+                + "chasis:" + chasis + ", peso:" + peso + ",potencia: " + potencia + " }";
 
-     }
+    }
 
-        
-        // Metodos de la clase
+    // Metodos de la clase
 
-        public void acelerar(){
+    public void acelerar() {
 
-            System.out.println("Vehiculo acelerando...");
-        }
-        public void frenar(){
-            System.out.println("vehiculo frenado...");
-        }
+        System.out.println("Vehiculo acelerando...");
+    }
 
-        public void girarIzquierda(){
-            System.out.println("vehiculo girando a la izquierda...");
-        }
-        public void girarDerecha(){
-            System.out.println("vehiculo girando a la derecha...");
+    public void frenar() {
+        System.out.println("vehiculo frenado...");
+    }
 
-        }
+    public void girarIzquierda() {
+        System.out.println("vehiculo girando a la izquierda...");
+    }
 
-        public void retroceder(){
-            System.out.println("vehiculo retrocediendo...");
-        }
-     }
+    public void girarDerecha() {
+        System.out.println("vehiculo girando a la derecha...");
 
+    }
 
+    public void retroceder() {
+        System.out.println("vehiculo retrocediendo...");
+    }
+}
