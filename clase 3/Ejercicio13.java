@@ -19,25 +19,28 @@ public class Ejercicio13 {
         int[] a = new int[n];
 
         //llenar el arreglo
-        for(int i= 0 ; i < a.length; i++){
+        for(int i= 0; i < a.length; i++) {
             a[i]= (int) (Math.random() * (50 - 0 )) + 0;
 
         }
         //calcular la media del arreglo
         //declarar una variable que almacene la suma del arreglo
         int sumaArreglo =0;
-        for(int i= 0 ; i < a.length; i++){
+        for(int i= 0 ; i < a.length; i++) {
             sumaArreglo += a[i];
         }
-        double media =sumaArreglo / a.length;
-        System.out.println("la media del arreglo ..." + media);
-        //definir la cantidad de elementos que tiene el arreglo por encima de la media 
-        // y por debajo de la media.
-        int contadorMayorMedia =0, contadorMenorMedia =0;
+        double media =sumaArreglo / ( double) a.length;
+        System.out.println("la media del arreglo es " + media);
 
-        for(int i= 0; i < a.length; i++){
-            if (a[i]>= media) {
+        //definir la cantidad de elementos que tiene el arreglo por encima de la media 
+        // y por debajo de la media;
+
+        int contadorMayorMedia = 0, contadorMenorMedia =0;
+
+        for(int i = 0; i < a.length; i++){
+            if (a[i] >= media) {
                 contadorMayorMedia++;
+
             }else{
                 contadorMenorMedia++;
 
@@ -45,8 +48,10 @@ public class Ejercicio13 {
         }
         //creacion de los arreglos que almacenaran los numeros mayores y menores 
         // a la media 
-        int[]mayores = new int[contadorMayorMedia];
-        int[]menores = new int[ contadorMenorMedia];
+        int[] mayores = new int[contadorMayorMedia];
+        int[] menores = new int[ contadorMenorMedia];
+
+        int posMayores = 0, posMenores = 0;
 
         for (int i =0; i < a.length; i++) {
             if (a[i] >= media) {
@@ -60,14 +65,24 @@ public class Ejercicio13 {
             }
         }
         // mostrar el arreglo de los mayores a la media 
+
+        System.out.print("elementos mayores o iguales a la media ");
         for( int i =0 ; i < mayores.length; i++) {
             System.out.println(mayores[i]+" ");
         }
     System.out.println();
 
-        // mostrar el arreglo de los menores a la media 
-        for (int i= 0; i < menores.length; i++);
-    System.out.println(menores[i] + " ");    
+        // mostrar el arreglo de los menores a la media
+        System.out.println("Elementos menores que la media ");
+
+        for (int i= 0; i < menores.length; i++) {
+
+         System.out.println( menores[i] + " "); 
+
+        }
+     
+        System.out.println();
+
     }
     
 }
