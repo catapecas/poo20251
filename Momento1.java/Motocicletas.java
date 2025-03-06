@@ -1,13 +1,13 @@
 public class Motocicletas {
 
-    private string placa;
+    private String placa;
     private double cilindraje;
-    private string marca;
+    private String marca;
     private int tiempo;
 
     //conductor de la clase
 
-    public Motocicletas ( String placa, double cilindraje,string marca,
+    public Motocicletas ( String placa, double cilindraje,String marca,
     int tiempo){
 
         this.placa = placa;
@@ -23,6 +23,7 @@ public class Motocicletas {
     }
 
     public double getCilindraje(){
+        return cilindraje;
 
     }
     public String getMarca (){
@@ -33,19 +34,19 @@ public class Motocicletas {
     public int getTiempo(){
         return tiempo;
     }
-    public String setPlaca(){
-        return placa;
+    public void setPlaca(String placa){
+        this.placa = placa;
     }
-    public double setCilindraje(){
-        return cilindraje;
+    public void setCilindraje(double cilindraje){
+       this.cilindraje= cilindraje;
 
     }
-    public String setMarca(){
-        return marca;
+    public void setMarca(String marca){
+        this.marca = marca;
 
     }
-    public int setTiempo(){
-        return tiempo;
+    public void setTiempo(int tiempo){
+       this.tiempo = tiempo;
     }
 
 }
