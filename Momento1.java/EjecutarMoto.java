@@ -92,17 +92,20 @@ public class EjecutarMoto {
       // Seleccionar puesto
       System.out.println("seleccione un puesto:");
       int puesto = entrada.nextInt()-1;
-
+      
+      // verifiamos que el puesto este dentro del rango permitido 
+      // puesto >= a motos.length evita que el usuario indique un numero mayor al pusto total.
       if (puesto < 0 || puesto >= motos.length) {
         System.out.println("Error puesto no valido.");
+        // return: si el numero digitado es invalido muestra error y sale de metodo
         return;
       }
-
+      // la condicion comprueba si el puesto esta ocupado,asociandolo a diferente de null muestra error 
       if (motos[puesto] !=null) {
         System.out.println("Error en el puesto" +(puesto + 1)+ "ya esta ocupado.");
         return;
       }
-
+      // Registra la moto en el puesto seleccionado.
        motos[puesto] = moto;
        System.out.println("moto registrada en el puesto" +(puesto + 1) + "ya esta ocupado.");
     }
@@ -114,19 +117,24 @@ public class EjecutarMoto {
         String placa = entrada.next();
 
         placa = placa.toUpperCase();
-
+     // llamamos la funcion que recorre los arreglos bajo cc y alto cc para encontrar la moto
+     // si la moto exite devuelve el objeto motocicleta
+     // si no se encuentra sera null
         Motocicletas moto = buscarMoto(placa);
 
-        
+        // si la moto != null fue encontrada.
+        // se solicita el tiempo de estaionamiento en minutos.
         if (moto != null) {
             System.out.println("ingrese el tiempo del estacionamiento en minutos:");
             int tiempo = entrada.nextInt();
-
+             
+            // se calcula el valor de la tarifa usando calcularTarifa(tiempo).
             double tarifa = calcularTarifa(tiempo);
             System.out.println("la tarifa a pagar es :$" + tarifa);
-
+         // se llama a liberar puesto(moto) que lo que hace es eliminar del arreglo la moto y deja disponible el puesto.
             liberarPuesto(moto);
         }else{
+            // si la moto no es encontrada muestra mensaje error
             System.out.println("moto no encontrada.");
         }
     }
@@ -142,10 +150,11 @@ public class EjecutarMoto {
         }
     }
 
-    // Metodo para liberar un puesto
+    // Metodo para liberar un puesto,busca en el arreglo bajo cc, si lo encuentra , lo elimina
     private static void liberarPuesto(Motocicletas moto){
         for(int i = 0; i < bajocc.length; i++){
             if (bajocc[i] != null && bajocc[i].getPlaca().equals(moto.getPlaca())) {
+                // identifica si el arreglo es = null y libera el puesto
                 bajocc[i] = null;
                 System.out.println("puesto liberado en el parqueadero de bajo cilindraje");
                 return;  
@@ -166,6 +175,7 @@ public class EjecutarMoto {
         System.out.println("---Estado del parqueadero---");
         System.out.println("Bajo cilindraje (20 puestos):");
         for(int i = 0; i < bajocc.length; i++){
+            // bajocc [i]==null? si es true = disponible , si false = ocupado.
             System.out.println("puesto" + (i + 1)+ ":" + (bajocc[i]==null? "disponible" : "ocupado"));
         }
 
@@ -177,6 +187,7 @@ public class EjecutarMoto {
 
     // metodo para buscar una moto por su placa
     private static Motocicletas buscarMoto(String placa){
+        // recorre el arreglo con un ciclo, si encuentra moto con la misma placa la va a retornar
         for(Motocicletas moto : bajocc){
             if (moto != null && moto.getPlaca().equals(placa)) {
                 return moto;
