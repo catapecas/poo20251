@@ -2,13 +2,15 @@
 import java.util.Scanner;
 
 public class EjecutarMoto {
+    // Arreglo para seleccionar parqueadero por cilindraje
     private static Motocicletas[] bajocc = new Motocicletas[20]; // parqueadero para motos de bajo cilindraje.
     private static Motocicletas[] altocc = new Motocicletas[10]; // parqueadero para moto de alto cilindraje .
+    //objeto scanner para toma y captura de datos.
     private static Scanner entrada = new Scanner (System.in);
-
+    
     public static void main(String[] args) {
         int opcion;
-
+        // se crea el switch para el menu principal
         do {
             System.out.println("--- menu principal---");
             System.out.println("1. Registrar moto bajo cilindraje");
@@ -41,12 +43,12 @@ public class EjecutarMoto {
             
         } while (opcion !=5);
     }
-// Metodo para registrar una moto
+     //se creo Metodo o funcion para registrar una moto
   public static void registrarMoto(Motocicletas[]motos,double cilindrajeLimite, String tipo) {
      System.out.println("---Registro de moto(" + tipo +")---");
      System.out.println("ingrese la placa de la moto:");
      String placa = entrada.next();
-
+     // se ingresa un toUppercase para que pueda leer la placa mayuscula y minuscula
      placa=placa.toUpperCase();
 
      //verificar si la moto ya esta registrada
@@ -76,7 +78,11 @@ public class EjecutarMoto {
     
       // Mostrar puestos disponibles 
       System.out.println("Puestos disponibles :");
-      for (int i = 0; i < motos.length; i++){
+      for (int i = 0; i < motos.length; i++){ 
+        /*i = posicion del arreglo dentro del ciclo ,inicia en 0
+          moto.length es la cantidad de espacio total en el parqueadero
+          */
+
         if (motos[i]== null) {
             System.out.println((i + 1)+ " ");    
         }
