@@ -22,6 +22,7 @@ public class EjecutarMoto {
             opcion = entrada.nextInt();
 
             switch (opcion) {
+                // case= cuando necesito ejecutar diferentes bloques de codigo segun el valor de la variable 
                 case 1 :
                   registrarMoto(bajocc,250,"bajo cilindraje");    
                     break;
@@ -40,7 +41,7 @@ public class EjecutarMoto {
                 default:
                     System.out.println("opcion no valida. intente de nuevo."); 
             }
-            
+            // do while = ciclo de repeticion 
         } while (opcion !=5);
     }
      //se creo Metodo o funcion para registrar una moto
@@ -68,6 +69,7 @@ public class EjecutarMoto {
             System.out.println("Error : esta moto debe registrarse en el parqueadero de alto cilindraje ");
             return;    
         }
+        // else = cuando no se cumple una funcion
      } else if (tipo.equals("alto cilindraje")) {
         if (cilindraje < 401) {
             System.out.println("Error: Esta moto debe registrarse en el parqueadeo de bajo cilindraje:");
