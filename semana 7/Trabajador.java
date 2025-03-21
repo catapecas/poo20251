@@ -1,4 +1,3 @@
-package semana 7;
 
 public class Trabajador {
 

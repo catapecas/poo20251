@@ -1,7 +1,4 @@
 
-import javax.print.DocFlavor.STRING;
-
-
 public class Operario extends Trabajador {
     
     private double horas;

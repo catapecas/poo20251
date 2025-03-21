@@ -10,12 +10,12 @@ public class Consultor extends Trabajador {
 
    }
    public double pagar(){
-      return SALARIO_BASE + (SALARIO_BASE * (comision/100)) 
+      return SALARIO_BASE + (SALARIO_BASE * (comision/100)); 
       
   }
 
-  public String toString(){
-      return"Consultor { idTrabajador: " + super.getIdtrabajador() +
+  public String toString() {
+      return "Consultor { idTrabajador: " + super.getIdtrabajador() +
        "Nombre:" + super.getNombre() + 
        "Apellido:" + super.getApellido() +
        "comision:" + comision + "}";
