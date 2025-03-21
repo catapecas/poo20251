@@ -12,10 +12,10 @@ public class Operario extends Trabajador {
     }
 
     public double pagar(){
-        return SALARIO_BASE *horas;
+        return SALARIO_BASE * horas;
     }
 
-    public String toString(){
+    public String toString() {
         return"Operario { idTrabajador: " + super.getIdtrabajador() +
          "Nombre:" + super.getNombre() + 
          "Apellido:" + super.getApellido() +

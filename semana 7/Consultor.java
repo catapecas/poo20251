@@ -4,7 +4,7 @@ public class Consultor extends Trabajador {
    private double comision;
    public final double SALARIO_BASE = 3500.0; // constante
 
-   public Consultor(int idTrabajador, String nombre, String apellido, Double comision){
+   public Consultor(int idTrabajador, String nombre, String apellido, double comision){
       super(idTrabajador, nombre, apellido);
       this.comision = comision;
 
