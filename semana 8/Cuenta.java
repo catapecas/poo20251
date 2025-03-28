@@ -11,7 +11,7 @@ public class Cuenta {
     }
 
     public String toString(){
-        return "cuenta{nombre: " + numero +
+        return "cuenta{numero: " + numero +
                " tipo: "+ tipo +
                 " saldo:"  + saldo + "}";
     }
