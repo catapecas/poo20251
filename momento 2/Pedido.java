@@ -9,7 +9,21 @@ public class Pedido {
     private Date fecha;
     private int numeroTarjetaCredito;
 
+    // constructor
+    public Pedido (Cliente cliente, producto[] producto, Date fecha, int numeroTarjetaCredito ){
+
+     this.cliente = cliente;
+     this.Producto = producto;
+     this.fecha = fecha;
+     this.numeroTarjetaCredito = numeroTarjetaCredito;
+
+    }
+
     //Metodos
+    public Cliente getCliente(){
+        return cliente;
+    }
+
 
     
 }

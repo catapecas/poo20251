@@ -1,7 +1,7 @@
 public class Producto {
     
     //Atributos
-    private int numero ;
+    private int numero;
 
     //Metodos
 
