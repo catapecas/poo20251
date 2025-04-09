@@ -10,7 +10,7 @@ public class Pedido {
     private int numeroTarjetaCredito;
 
     // constructor
-    public Pedido (Cliente cliente, producto[] producto, Date fecha, int numeroTarjetaCredito ){
+    public Pedido (Cliente cliente, Producto[] producto, Date fecha, int numeroTarjetaCredito ){
 
      this.cliente = cliente;
      this.Producto = producto;
