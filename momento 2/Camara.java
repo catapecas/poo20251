@@ -7,9 +7,9 @@ public class Camara extends Producto {
 
 
   // constructor
-    public Camara (int numero, String marca, String modelo, double codigo, double ancho, double alto,
-      String nombre, String referencia){
-      super(numero, nombre, referencia, ancho, alto);
+    public Camara (String marca, String modelo, double codigo,int numero, String nombre, double precio, double ancho, double alto,
+     String referencia){
+      super(numero, nombre, precio, referencia, ancho, alto);        
      this.marca = marca;
      this.modelo = modelo;
      this.codigo = codigo;

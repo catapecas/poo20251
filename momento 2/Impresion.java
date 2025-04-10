@@ -6,8 +6,9 @@ public class Impresion extends Producto {
     private Foto[] foto; // Arreglo de la foto
 
     // Constructor
-    public Impresion (String color, Foto[] foto, int numero,double precio, String nombre){
-         
+    public Impresion (String color, Foto[] foto, int numero,double precio, String nombre,
+     String referencia, double ancho, double alto){
+        super(numero, nombre,precio, referencia, ancho, alto); 
         this.color = color;
         this.foto = foto;
     }

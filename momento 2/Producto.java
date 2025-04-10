@@ -9,7 +9,7 @@ public class Producto {
     private double alto;
 
     // constructor
-    public Producto(int numero, String nombre, String referencia, double ancho, double alto) {
+    public Producto(int numero, String nombre,double precio, String referencia, double ancho, double alto) {
         this.numero = numero;
         this.nombre = nombre;
         this.precio = precio;
