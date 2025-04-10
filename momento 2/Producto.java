@@ -33,6 +33,10 @@ public class Producto {
         return ancho;
     }
 
+    public double getAlto(){
+        return alto;
+    }
+
     public String toString(){
         return "Producto{" + 
         "numero=" + numero + 
