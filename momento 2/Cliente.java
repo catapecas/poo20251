@@ -32,4 +32,13 @@ public class Cliente {
         return correoEletronico;
     }
 
+    public String toString() {
+        return "Cliente [" +
+                "Cedula: " + cedula + '\'' +
+                ", Nombre: " + nombre + '\'' +
+                ", NumeroTelefono: " + numeroTelefono + '\'' +
+                ", CorreoElectronico: " + correoEletronico + '\'' +
+                ']';
+    }
+
 }

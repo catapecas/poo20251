@@ -1,6 +1,4 @@
-package Clase9;
- 
-public class EjecutarMomento2 {
+ public class EjecutarMomento2 {
     public static void main(String[] args) {
         Cliente[] cliente = new Cliente[3];
         cliente[0] = new Cliente(102221454, "Rafael Perez", 32344412, "rafaelperez@hotmail.com");
