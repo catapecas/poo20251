@@ -6,7 +6,7 @@ public class Impresion extends Producto {
     private Foto[] foto; // Arreglo de la foto
 
     // Constructor
-    public Impresion(String color, Foto[] foto) {
+    public Impresion(String color, Foto[] foto){
         this.color = color;
         this.foto = foto;
     }
