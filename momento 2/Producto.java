@@ -12,6 +12,7 @@ public class Producto {
     public Producto(int numero, String nombre, String referencia, double ancho, double alto) {
         this.numero = numero;
         this.nombre = nombre;
+        this.precio = precio;
         this.referencia = referencia;
         this.ancho = ancho;
         this.alto = alto;
@@ -46,6 +47,7 @@ public class Producto {
         return "Producto{" + 
         "numero=" + numero + 
         ",nombre=" + nombre +
+        ",precio=" + precio +
         ",referencia=" + referencia +
         ",ancho=" + ancho +
         ",alto=" + alto + "}"; 
