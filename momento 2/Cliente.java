@@ -1,14 +1,14 @@
 public class Cliente {
 
     // Atributos
-    private String cedula;
+    private int cedula;
     private String nombre;
-    private int numeroTelefono;
+    private String numeroTelefono;
     private String correoEletronico;
 
     // constructor
 
-    public Cliente(String cedula, String nombre, int numeroTelefono, String correoElectronico) {
+    public Cliente(int cedula, String nombre, String numeroTelefono, String correoElectronico) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.numeroTelefono = numeroTelefono;
@@ -16,7 +16,7 @@ public class Cliente {
     }
 
     // metodos
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
@@ -24,12 +24,21 @@ public class Cliente {
         return nombre;
     }
 
-    public int getNumeroTelefono() {
+    public String getNumeroTelefono() {
         return numeroTelefono;
     }
 
     public String getCorreoEletronico() {
         return correoEletronico;
+    }
+
+    // Setters (opcional, si necesitas modificar los valores)
+    public void setNumeroTelefono(String numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoEletronico = correoElectronico;
     }
 
     public String toString() {

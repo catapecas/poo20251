@@ -11,4 +11,14 @@ public class Cliente {
     public String toString(){
         return "cliente{ cedula :" + cedula + "nombre:" + nombre + "}";
     }
+
+    public String getNombre() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNombre'");
+    }
+
+    public String getCedula() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCedula'");
+    }
 }
