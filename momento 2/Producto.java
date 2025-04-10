@@ -3,6 +3,7 @@ public class Producto {
     // Atributos
     private int numero;
     private String nombre;
+    private double precio;
     private String referencia;
     private double ancho;
     private double alto;
@@ -23,6 +24,10 @@ public class Producto {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public double getPrecio(){
+        return precio;
     }
 
     public String getReferencia() {
