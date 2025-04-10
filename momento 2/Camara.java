@@ -14,6 +14,17 @@ public class Camara extends Producto {
      this.modelo = modelo;
      this.codigo = codigo;
     }
+     //Metodos
+       public String getMarca(){
+         return marca;
+        }
 
+       public String getModelo(){
+         return modelo;
+        }
+
+        public double getCodigo(){
+            return codigo;
+        }
 
 }
