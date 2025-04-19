@@ -1,56 +1,35 @@
 public class Producto {
-
-    // Atributos
+   
+    //Atributos
     private int numero;
-    private String nombre;
     private double precio;
-    private String referencia;
-    private double ancho;
-    private double alto;
-
-    // constructor
-    public Producto(int numero, String nombre,double precio, String referencia, double ancho, double alto) {
-        this.numero = numero;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.referencia = referencia;
-        this.ancho = ancho;
-        this.alto = alto;
+ 
+    //Métodos
+   //Contructor: que lo reconocemos porque tiene el mismo nombre que la clase y no tiene tipo de retorno.
+    public Producto (int numero, double precio){
+        this.numero=numero;
+        this.precio=precio;
     }
-
-    // metodo
-    public int getNumero() {
+     //Sirven para obtener el valor de un atributo (variable) privado de una clase.
+    public int getNumero(){
         return numero;
     }
-
-    public String getNombre() {
-        return nombre;
+    //sirven para modificar o actualizar el valor de un atributo de una clase.
+    public void setNumero(int numero){
+        this.numero = numero;
     }
-
+ 
     public double getPrecio(){
         return precio;
     }
-
-    public String getReferencia() {
-        return referencia;
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
-
-    public double getAncho() {
-        return ancho;
-    }
-
-    public double getAlto(){
-        return alto;
-    }
-
+ 
     public String toString(){
-        return "Producto{" + 
-        "numero=" + numero + 
-        ",nombre=" + nombre +
-        ",precio=" + precio +
-        ",referencia=" + referencia +
-        ",ancho=" + ancho +
-        ",alto=" + alto + "}"; 
-     }
-
+        return "";
+    }
+    public double getValorTotal(){
+        return 0.0;
+    }
 }

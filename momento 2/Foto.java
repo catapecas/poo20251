@@ -1,46 +1,23 @@
 public class Foto {
-
-    //Atributos
+ 
+    // Atributos
     private String fichero;
-    private String fotoColor;
-    private String fotoBlancoNegro;
-    private int numeroCopias;
-
-    // constructor 
-    public Foto(String fichero, String fotoColor, String fotoBlancoNegro, int numeroCopias) {
-        this.fichero = fichero;
-        this.fotoColor = fotoColor;
-        this.fotoBlancoNegro = fotoBlancoNegro;
-        this.numeroCopias = numeroCopias;
-    }
-   
-      // Metodos
-    public void setFichero(String fichero) {
+ 
+    // Métedo
+    //Contructor: que lo reconocemos porque tiene el mismo nombre que la clase y no tiene tipo de retorno.
+    public Foto(String fichero) {
         this.fichero = fichero;
     }
+    //Sirven para obtener el valor de un atributo (variable) privado de una clase.
     public String getFichero() {
         return fichero;
     }
-    public void setFotoColor(String fotoColor) {
-        this.fotoColor = fotoColor;
+    //Sirven para modificar o actualizar el valor de un atributo de una clase.
+    public void setFichero(String fichero) {
+        this.fichero = fichero;
     }
-    public String getFotoColor() {
-        return fotoColor;
+    //Cumple con la misma funcion del toString aqui se puso por la propuesta del documento
+    public String print(){
+        return "Foto { Fichero: "  + fichero +" }";
     }
-    public void setFotoBlancoNegro(String fotoBlancoNegro) {
-        this.fotoBlancoNegro = fotoBlancoNegro;
-    }
-    public String getFotoBlancoNegro() {
-        return fotoBlancoNegro;
-    }
-    public void setNumeroCopias(int numeroCopias) {
-        this.numeroCopias = numeroCopias;
-    }
-    public int getNuemeoCopias() {
-        return numeroCopias;
-    }
-    public String toString() {
-        return "Foto{" + "fichero=" + fichero + ", fotoColor=" + fotoColor + ", fotoBlancoNegro=" + fotoBlancoNegro + ", numeroCopias=" + numeroCopias + '}';
-    }
-
 }

@@ -1,53 +1,35 @@
 public class Cliente {
-
-    // Atributos
-    private int cedula;
+   
+    //Atributos
+    private String cedula;
     private String nombre;
-    private String numeroTelefono;
-    private String correoEletronico;
-
-    // constructor
-
-    public Cliente(int cedula, String nombre, String numeroTelefono, String correoElectronico) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.numeroTelefono = numeroTelefono;
-        this.correoEletronico = correoElectronico;
+ 
+    //Metodos
+    //Contructor: que lo reconocemos porque tiene el mismo nombre que la clase y no tiene tipo de retorno.
+    public Cliente(String cedula, String nombre){
+        this.cedula=cedula;
+        this.nombre=nombre;
     }
-
-    // metodos
-    public int getCedula() {
+    //Sirven para obtener el valor de un atributo (variable) privado de una clase.
+    public String getCedula() {
         return cedula;
     }
-
-    public String getNombre() {
+    //Sirven para modificar o actualizar el valor de un atributo de una clase.
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+ 
+    public String getNombre(){
         return nombre;
     }
-
-    public String getNumeroTelefono() {
-        return numeroTelefono;
+    public void setNombre(String nombre) {
+         this.nombre = nombre;
     }
-
-    public String getCorreoEletronico() {
-        return correoEletronico;
+ 
+    //sirve para devolver una representación en forma de texto del objeto. Es decir,
+    //cuando tú quieras ver el contenido de un objeto de forma entendible, usas este método.
+    public String toString(){
+        return "Cliente: { Cedula: "  + cedula +
+                        " Nombre: " + nombre + " } ";
     }
-
-    // Setters (opcional, si necesitas modificar los valores)
-    public void setNumeroTelefono(String numeroTelefono) {
-        this.numeroTelefono = numeroTelefono;
-    }
-
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoEletronico = correoElectronico;
-    }
-
-    public String toString() {
-        return "Cliente [" +
-                "Cedula: " + cedula + '\'' +
-                ", Nombre: " + nombre + '\'' +
-                ", NumeroTelefono: " + numeroTelefono + '\'' +
-                ", CorreoElectronico: " + correoEletronico + '\'' +
-                ']';
-    }
-
 }
