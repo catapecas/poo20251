@@ -31,7 +31,7 @@ public class Inicio {
                     nombre = entrada.next();
                     System.out.println("Por favor ingrese el numero de cedula: ");
                     cedula = entrada.next();
-                    cliente = new Cliente(cedula, nombre);
+                    cliente = new Cliente(opc, nombre);
                     System.out.println("Se creo el cliente exitosamente.");
                     verificador = true;
                 }

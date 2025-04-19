@@ -7,8 +7,8 @@ public class Cliente {
     //Metodos
     //Contructor: que lo reconocemos porque tiene el mismo nombre que la clase y no tiene tipo de retorno.
     public Cliente(String cedula, String nombre){
-        this.cedula=cedula;
-        this.nombre=nombre;
+        this.cedula = cedula;
+        this.nombre = nombre;
     }
     //Sirven para obtener el valor de un atributo (variable) privado de una clase.
     public String getCedula() {
