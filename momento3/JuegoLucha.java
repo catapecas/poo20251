@@ -27,12 +27,45 @@ public class JuegoLucha {
         }
     }
  
-    private void turno(Personaje atacante, Personaje defensor) {
-        System.out.println("Turno de " + atacante.getNombre() + ". Vida de " + defensor.getNombre() + ": " + defensor.getPuntosDeVida());
-        atacante.atacar(defensor);
-        System.out.println(defensor.getNombre() + " ahora tiene " + defensor.getPuntosDeVida() + " puntos de vida.\n");
+   private void turno(Personaje atacante, Personaje defensor) {
+    Scanner scanner = new Scanner(System.in);
+ 
+    System.out.println("--------------------------------------------------");
+    System.out.println("Turno de " + atacante.getNombre());
+    System.out.println(defensor.getNombre() + " tiene " + defensor.getPuntosDeVida() + " puntos de vida.");
+ 
+    System.out.println("¿Qué desea hacer?");
+    System.out.println("1. Atacar");
+    System.out.println("2. Tirar hechizo");
+    System.out.print("Opción: ");
+    int opcion = scanner.nextInt();
+    scanner.nextLine(); // limpiar Enter
+ 
+    switch (opcion) {
+        case 1:
+            atacante.atacar(defensor);
+            break;
+        case 2:
+            // Solo el mago tiene hechizo
+            if (atacante instanceof Mago) {
+                ((Mago) atacante).atacar(defensor); // Usa su hechizo (daño más alto)
+            } else {
+                System.out.println("¡" + atacante.getNombre() + " no es un mago! Se realiza un ataque normal.");
+                atacante.atacar(defensor);
+            }
+            break;
+        default:
+            System.out.println("Opción inválida. Se realizará un ataque normal.");
+            atacante.atacar(defensor);
+            break;
     }
  
+    System.out.println(defensor.getNombre() + " ahora tiene " + defensor.getPuntosDeVida() + " puntos de vida.");
+    System.out.println("Presiona Enter para continuar...");
+    scanner.nextLine();
+    System.out.println("--------------------------------------------------\n");
+}
+
     public static Personaje crearPersonaje(String tipo, String nombre) {
         if (tipo.equalsIgnoreCase("guerrero")) {
             return new Guerrero(nombre);
